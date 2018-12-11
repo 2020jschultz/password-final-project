@@ -20,12 +20,13 @@ function upperCaseCheck(password){
   
   for(let i = 0; i < password.length; i++){
 
-  if(password.fromCharCode(i) >= String.fromCharCode(65-90)){
+  if(password.CharCodeAt(i) >= 65 && (password.CharCodeAt(i) <= 90)){
       return true;
     }
-
+    if(password.CharCodeAt(i) < 65 || (password.CharCodeAt(i) > 90)){
+      return false;
+    }
   }
-  return false;
 }
 
 
@@ -36,7 +37,15 @@ function upperCaseCheck(password){
 //returns true or false if there is an lowercase character in the password
 function lowerCaseCheck(password){
 
+  for(let i = 0; i < password.length; i++){
 
+    if(password.CharCodeAt(i) >= 97 && (password.CharCodeAt(i) <= 122)){
+        return true;
+      }
+      else if(password.CharCodeAt(i) < 97 || (password.CharCodeAt(i) > 122)){
+        return false;
+      }
+    }
 }
 
 
@@ -49,7 +58,15 @@ function lowerCaseCheck(password){
 //returns true or false if there is a numerical character
 function numberCheck(password){
 
+  for(let i = 0; i < password.length; i++){
 
+    if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+        return true;
+      }
+      else if(password.CharCodeAt(i) < String.fromCharCode(65) || (password.CharCodeAt(i) > String.fromCharCode(90){
+        return false;
+      }
+    }
 }
 
 
@@ -60,8 +77,26 @@ function numberCheck(password){
 
 //returns true or false if there is a special character in the password
 function specialCheck(check){
+  
+  if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+    return true;
+  
+    else if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+      return true;
+    }
 
+    else if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+      return true;
+    }
 
+    else if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+      return true;
+    }
+
+    else if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+      return false;
+    }
+  }
 }
 
 
