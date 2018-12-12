@@ -60,10 +60,10 @@ function numberCheck(password){
 
   for(let i = 0; i < password.length; i++){
 
-    if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+    if(password.CharCodeAt(i) >= 33 && (password.CharCodeAt(i) <= 47)){
         return true;
       }
-      else if(password.CharCodeAt(i) < String.fromCharCode(65) || (password.CharCodeAt(i) > String.fromCharCode(90){
+      else if(password.CharCodeAt(i) < 65 || (password.CharCodeAt(i) > 90)){
         return false;
       }
     }
@@ -78,22 +78,22 @@ function numberCheck(password){
 //returns true or false if there is a special character in the password
 function specialCheck(check){
   
-  if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+  if(password.CharCodeAt(i) >= 33 && (password.CharCodeAt(i) <= 47 )){
     return true;
   
-    else if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+    if(password.CharCodeAt(i) >= 58 && (password.CharCodeAt(i) <= 64)){
       return true;
     }
 
-    else if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+    if(password.CharCodeAt(i) >= 91 && (password.CharCodeAt(i) <= 96)){
       return true;
     }
 
-    else if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+    if(password.CharCodeAt(i) >= 125 && (password.CharCodeAt(i) <= 127)){
       return true;
     }
 
-    else if(password.CharCodeAt(i) >= String.fromCharCode(33) && (password.CharCodeAt(i) <= String.fromCharCode(47))){
+    if(password.CharCodeAt(i) >= 65 && (password.CharCodeAt(i) <= 90)){
       return false;
     }
   }
@@ -109,7 +109,7 @@ function specialCheck(check){
 
 
 function passedAllChecks(){
-
+  
 }
 
 
